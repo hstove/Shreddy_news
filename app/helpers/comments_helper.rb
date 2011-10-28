@@ -1,11 +1,10 @@
 module CommentsHelper
     
-  
-  def vimeo(text)
+  def vimeo(text, 
+            width = 440, 
+            height = 248)
      text.gsub(/http:\/\/(www.)?vimeo\.com\/([A-Za-z0-9._%-]*)((\?|#)\S+)?/) do
        vimeo_id = $2
-       width = '440'
-       height = '248'
        show_title = "title=0"
        show_byline = "byline=0" 
        show_portrait = "portrait=0"
@@ -13,7 +12,7 @@ module CommentsHelper
        query_string_variables = [show_title, show_byline, show_portrait].compact.join("&")
        query_string = "?" + query_string_variables unless query_string_variables.empty?
 
-       %{<iframe src="http://player.vimeo.com/video/#{vimeo_id}#{query_string}" width="#{width}" height="#{height}" frameborder="#{frameborder}"></iframe>}
+       %{iframe src="http://player.vimeo.com/video/#{vimeo_id}#{query_string}" width="#{width}" height="#{height}" frameborder="#{frameborder}"</iframe}
      end
    end
 end

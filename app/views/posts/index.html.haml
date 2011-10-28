@@ -8,7 +8,7 @@
         %span.votes= post.votes
         %a{href: "#"}= link_to '+', :controller => :posts, :action => :upvote, :id => post.id
       %td.title
-        = link_to post.title, "http://#{post.url}"
+        = link_to post.title, post.url
         %br
         %span.url= post.url
       %td.comments= link_to 'View thread', post

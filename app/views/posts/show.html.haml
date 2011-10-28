@@ -13,4 +13,4 @@
   
 = link_to 'new comment', new_post_comment_path( :post_id => @post.id ), :class => "new_comment"
 
-= vimeo(@post.url)
+= content_tag(vimeo(@post.url))
