@@ -1,0 +1,40 @@
+%table#posts
+  -if @posts.empty?
+    %tr.post
+      %td Sorry, we're empty!
+  - @posts.each do |post|
+    %tr.post
+      %td
+        %span.votes= post.votes
+        %a{href: "#"}= link_to '+', :controller => :posts, :action => :upvote, :id => post.id
+      %td.title
+        = link_to post.title, "http://#{post.url}"
+        %br
+        %span.url= post.url
+      %td.comments= link_to 'View thread', post
+.newpost= link_to 'New Post', new_post_path
+
+/  
+  %h1 Listing posts
+
+  %table
+    %tr
+      %th Title
+      %th Url
+      %th Votes
+      %th Score
+      %th
+      %th
+      %th
+
+    - @posts.each do |post|
+      %tr
+        %td= post.title
+        %td= post.url
+        %td= post.votes
+        %td= link_to 'Show', post
+        %td= link_to 'Edit', edit_post_path(post)
+        %td= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete
+
+  %br
+

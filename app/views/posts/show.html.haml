@@ -1,0 +1,17 @@
+
+
+%p
+  %b Title:
+  = @post.title
+%p
+  %b Url:
+  = @post.url
+%p
+  %b Votes:
+  = @post.votes
+
+%ul  
+- @post.comments.each do |c|
+  %li= c.content
+  
+= link_to 'new comment', new_post_comment_path( :post_id => @post.id )
