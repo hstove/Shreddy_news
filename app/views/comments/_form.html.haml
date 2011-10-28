@@ -7,7 +7,6 @@
           %li= msg
 
   .field
-    = f.label :content
-    = f.text_area :content
+    = f.text_area :content, :rows => "4"
   .actions
     = f.submit 'Save'

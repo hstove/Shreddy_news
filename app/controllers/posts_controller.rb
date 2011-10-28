@@ -20,7 +20,6 @@ class PostsController < ApplicationController
       format.json { render json: @post }
     end
   end
-
   # GET /posts/new
   # GET /posts/new.json
   def new

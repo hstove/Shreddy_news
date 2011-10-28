@@ -1,17 +1,16 @@
 
 
-%p
-  %b Title:
-  = @post.title
-%p
-  %b Url:
-  = @post.url
-%p
-  %b Votes:
-  = @post.votes
+.comment_link= link_to @post.title, @post.url
 
-%ul  
-- @post.comments.each do |c|
-  %li= c.content
+%table
+  - @post.comments.each do |c|
+    %tr.comment
+      %td
+        %span.content= c.content
+        %br
+        %span.posted= time_ago_in_words(c.created_at) + " ago"
+%br
   
-= link_to 'new comment', new_post_comment_path( :post_id => @post.id )
+= link_to 'new comment', new_post_comment_path( :post_id => @post.id ), :class => "new_comment"
+
+= vimeo(@post.url)
