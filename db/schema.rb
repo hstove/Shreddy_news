@@ -13,8 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20111029012443) do
 
-# Could not dump table "comments" because of following StandardError
-#   Unknown type 'fixnum' for column 'post_id'
 
   create_table "posters", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
