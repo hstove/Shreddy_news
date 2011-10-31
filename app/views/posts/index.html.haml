@@ -11,6 +11,8 @@
         = link_to post.title, post
         %br
         %span.url= time_ago_in_words(post.created_at) + " ago"
+      %td.comments= post.comments.count 
+      
 .newpost= link_to 'New Post', new_post_path
 
 /  
