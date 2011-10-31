@@ -1,17 +1,19 @@
 ShreddyNews::Application.routes.draw do
+  
+
+  
   resources :comments
 
-  get "users/new"
-
-  get "users/create"
-
   get "admin/index"
+  
+  match "admin" => "admin#index"
   
   get "posts/upvote"
 
   resources :posts do
     resources :comments
   end
+  devise_for :posters
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -2,6 +2,8 @@
 
 .comment_link= link_to @post.title, @post.url
 
+.video= content_tag(filters(@post.url))
+
 %table
   - @post.comments.each do |c|
     %tr.comment
@@ -11,6 +13,6 @@
         %span.posted= time_ago_in_words(c.created_at) + " ago"
 %br
   
-= link_to 'new comment', new_post_comment_path( :post_id => @post.id ), :class => "new_comment"
+.new_comment= link_to 'new comment', new_post_comment_path( :post_id => @post.id )
 
-= content_tag(vimeo(@post.url))
+

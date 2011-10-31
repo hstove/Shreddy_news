@@ -6,12 +6,12 @@
     %tr.post
       %td
         %span.votes= post.votes
-        %a{href: "#"}= link_to '+', :controller => :posts, :action => :upvote, :id => post.id
+        = link_to '+', :controller => :posts, :action => :upvote, :id => post.id
       %td.title
-        = link_to post.title, post.url
+        = link_to post.title, post
         %br
-        %span.url= post.url
-      %td.comments= link_to 'View thread', post
+        %span.url= time_ago_in_words(post.created_at) + " ago"
+      %td.comments= link_to "#{post.comments.count} comments", post
 .newpost= link_to 'New Post', new_post_path
 
 /  
@@ -37,4 +37,5 @@
         %td= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete
 
   %br
+  
 

@@ -1,7 +1,7 @@
 = form_for @post do |f|
   -if @post.errors.any?
     #error
-      %h1 sorry brah! #{pluralize(@post.errors.count, "Error")} prohibited this post from being saved.
+      %h1 Sorry dude. #{pluralize(@post.errors.count, "Error")} prohibited this post from being saved.
       %ul next time:
       - @post.errors.full_messages.each do |msg|
         %li= msg

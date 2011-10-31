@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.find(:all, :order => 'votes DESC') 
+    @posts = Post.all.sort { |a,b| -(a.score <=> b.score) }
 
     respond_to do |format|
       format.html # index.html.erb
@@ -85,12 +85,11 @@ class PostsController < ApplicationController
     post = Post.find(params[:id])
     if post.votes?
       post.votes += 1
-    elsif post.votes == 0
-      post.votes += 1
-    else 
-      post.votes = 0
+    else post.votes.nil?
+      post.votes = 1
     end
     post.save
     redirect_to :action => 'index'
   end
+  
 end
