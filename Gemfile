@@ -4,6 +4,8 @@ gem 'rails', '3.1.1'
 gem 'haml-rails'
 gem 'will_paginate', '~>3.0'
 gem 'addressable'
+gem 'minitest'
+gem 'thin'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'

@@ -3,11 +3,11 @@
 one:
   title: MyString
   url: MyString
-  votes: 
+  votes: 1
   score: 1.5
 
 two:
   title: MyString
   url: MyString
-  votes: 
+  votes: 1
   score: 1.5
