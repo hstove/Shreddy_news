@@ -6,6 +6,7 @@ gem 'will_paginate', '~>3.0'
 gem 'addressable'
 gem 'minitest'
 gem 'thin'
+gem 'taps'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
