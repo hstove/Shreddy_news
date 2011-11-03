@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
   has_many :comments
-  validates_presence_of :url, :title
+  belongs_to :user
+  validates_presence_of :url, :title, :user_id
   validate :is_video?
   validates_format_of :url, :with => URI::regexp(%w(http https))
   validates_uniqueness_of :url, :message => "This has already been submitted. No reposts!"

@@ -15,7 +15,7 @@
           %th 
             %a{href: "#"} About
           -if user_signed_in?
-            %th= current_user.email
+            %th= current_user.username
             %th= link_to 'sign out', destroy_user_session_path, :method => 'delete'
           -else
             %th= link_to 'sign up', new_user_registration_path

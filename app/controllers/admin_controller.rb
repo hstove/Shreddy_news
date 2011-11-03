@@ -1,8 +1,12 @@
 class AdminController < ApplicationController
-  http_basic_authenticate_with :name => "hank", :password => "admin"
+  before_filter :ensure_admin
+  
   def index
     @posts = Post.all.sort { |a,b| -(a.score <=> b.score)}
     @admin = self 
   end
+  
+  def ensure_admin
+    
 
 end
