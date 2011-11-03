@@ -1,7 +1,7 @@
 ShreddyNews::Application.routes.draw do
   
+  devise_for :users
 
-  
   resources :comments
 
   get "admin/index"
@@ -13,7 +13,6 @@ ShreddyNews::Application.routes.draw do
   resources :posts do
     resources :comments
   end
-  devise_for :posters
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

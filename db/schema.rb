@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111102023235) do
+ActiveRecord::Schema.define(:version => 20111103005738) do
 
   create_table "comments", :force => true do |t|
     t.text     "content"
@@ -20,7 +20,15 @@ ActiveRecord::Schema.define(:version => 20111102023235) do
     t.datetime "updated_at"
   end
 
-  create_table "posters", :force => true do |t|
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.string   "url"
+    t.integer  "votes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
     t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
     t.string   "reset_password_token"
@@ -35,22 +43,7 @@ ActiveRecord::Schema.define(:version => 20111102023235) do
     t.datetime "updated_at"
   end
 
-  add_index "posters", ["email"], :name => "index_posters_on_email", :unique => true
-  add_index "posters", ["reset_password_token"], :name => "index_posters_on_reset_password_token", :unique => true
-
-  create_table "posts", :force => true do |t|
-    t.string   "title"
-    t.string   "url"
-    t.integer  "votes"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "email"
-    t.string   "password_digest"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
 end

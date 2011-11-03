@@ -7,6 +7,7 @@ gem 'addressable'
 gem 'minitest'
 gem 'thin'
 gem 'taps'
+gem 'devise'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -18,7 +19,7 @@ end
 group :production do
   gem 'pg'
 end
-gem 'devise'
+
 
 gem 'heroku'
 
