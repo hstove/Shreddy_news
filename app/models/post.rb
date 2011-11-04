@@ -16,11 +16,10 @@ class Post < ActiveRecord::Base
   
   def is_video?
     url = self
-    if url.url =~ /http:\/\/(www.)?vimeo\.com\/([A-Za-z0-9._%-]*)((\?|#)\S+)?/
-      @safe = true
-    elsif url.url =~ /http:\/\/(www.)?youtube\.com\/watch\?v=([A-Za-z0-9._%-]*)(\&\S+)?|http:\/\/(www.)?youtu\.be\/([A-Za-z0-9._%-]*)?/
-      @safe = true
-    else
+    vimeo_regex = /http:\/\/(www.)?vimeo\.com\/([A-Za-z0-9._%-]*)((\?|#)\S+)?/
+    youtube_regex = /http:\/\/(www.)?youtube\.com\/watch\?v=([A-Za-z0-9._%-]*)(\&\S+)?|http:\/\/(www.)?youtu\.be\/([A-Za-z0-9._%-]*)?/
+    ns_regex = /http:\/\/(www.)?newschoolers\.com\/watch\/([0-9]*)/
+    unless url.url =~ vimeo_regex || youtube_regex || ns_regex
       errors.add(:url, "- Shreddy News only accepts links from Vimeo and Youtube right now")
     end
   end

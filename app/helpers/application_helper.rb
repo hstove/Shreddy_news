@@ -1,7 +1,10 @@
 module ApplicationHelper
   
   def filters(text)
-    text.gsub(/http:\/\/(www.)?vimeo\.com\/([A-Za-z0-9._%-]*)((\?|#)\S+)?/) do
+    vimeo_regex = /http:\/\/(www.)?vimeo\.com\/([A-Za-z0-9._%-]*)((\?|#)\S+)?/
+    youtube_regex = /http:\/\/(www.)?youtube\.com\/watch\?v=([A-Za-z0-9._%-]*)(\&\S+)?|http:\/\/(www.)?youtu\.be\/([A-Za-z0-9._%-]*)?/
+    ns_regex = /http:\/\/(www.)?newschoolers\.com\/watch\/([0-9]*)/
+    if vimeo_regex.match(text)
        vimeo_id = $2
        width = '440'
        height = '248'
@@ -14,13 +17,16 @@ module ApplicationHelper
 
        @result = %{iframe src="http://player.vimeo.com/video/#{vimeo_id}#{query_string}" width="#{width}" height="#{height}" frameborder="#{frameborder}"</iframe}
     end
-    text.gsub(/http:\/\/(www.)?youtube\.com\/watch\?v=([A-Za-z0-9._%-]*)(\&\S+)?|http:\/\/(www.)?youtu\.be\/([A-Za-z0-9._%-]*)?/) do
+    if youtube_regex.match(text)
       youtube_id = $2 || $5
       width = 390
       height = 250
       frameborder = 0
-      @result = %{iframe class="youtube-player" type="text/html" width="#{width}" height="#{height}" src="http://www.youtube.com/embed/#{youtube_id}" frameborder="#{frameborder}"
-  </iframe}
+      @result = %{iframe class="youtube-player" type="text/html" width="#{width}" height="#{height}" src="http://www.youtube.com/embed/#{youtube_id}" frameborder="#{frameborder}"</iframe}
+    end
+    if ns_regex.match(text)
+      ns_id = $2
+      @result = %{iframe src="http://www.newschoolers.com/videoembed/#{ns_id}" class="nsVideoEmbed" width="360" height="225" frameborder="0" style="border: 0px; padding: 0xp; margin: 0px;"<\/iframe}
     end
     @result
   end
