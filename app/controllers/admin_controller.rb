@@ -6,7 +6,10 @@ class AdminController < ApplicationController
     @admin = self 
   end
   
-  def ensure_admin
-    
+  def ensure_admin?
+    if current_user.username == 'heynk'
+      true
+    end
+  end
 
 end
