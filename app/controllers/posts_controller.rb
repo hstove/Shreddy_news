@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   
-  before_filter :authenticate_user!, :except => :index
+  before_filter :authenticate_user!, :except => [:index, :show]
   # GET /posts
   # GET /posts.json
   def index
@@ -17,6 +17,9 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
+    @comments = @post.comments.all
+    @comment = @post.comments.new
+    @user = current_user
 
     respond_to do |format|
       format.html # show.html.erb
@@ -85,15 +88,31 @@ class PostsController < ApplicationController
     end
   end
   
-  def upvote
-    post = Post.find(params[:id])
-    if post.votes?
-      post.votes += 1
-    else post.votes.nil?
-      post.votes = 1
-    end
-    post.save
+  #def upvote
+   # post = Post.find(params[:id])
+    #if post.votes?
+    #  post.votes += 1
+   # else post.votes.nil?
+    #  post.votes = 1
+   # end
+  #  post.save
+   # redirect_to :action => 'index'
+  #end
+  
+  def vote
+    #params[:answer_id][:vote]
+    #it can be "1" or "-1"
+    @post = Post.find(params[:post_id])
+    @post.vote!(params[:post_id][:votes])
     redirect_to :action => 'index'
   end
+  
+  def upvote
+    @post = Post.find(params[:post_id])
+    @user = current_user
+    @votes = Vote.find_or_create_by_post_id_and_user_id(@post.id, @user.id)
+    redirect_to :action => 'index'
+  end
+    
   
 end

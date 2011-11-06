@@ -35,6 +35,7 @@ table
       :font-family Helvetica
       :letter-spacing -2px
       :word-spacing -5px
+      :font-weight 700
 h1
   :text-align center
 
@@ -51,6 +52,28 @@ th
     &:hover
       :color black
       :background-color none
+  th 
+    :font-weight 500
+    :position relative
+    
+colgroup
+  :position relative
+
+.left
+  :width 20%
+.two
+  :width 65%
+.three
+  :left 5%
+
+.sign a
+  :color darken(blue, 30%)
+  :font-weight 600
+  
+.username
+  :font-family 'helvetica neue'
+  :font-weight 400
+      
 .menu
   :background-color rgba(100,100,100,.3)
   
@@ -61,16 +84,22 @@ th
   :color #ccc
   :margin-left 5px
   
-$postfont: 'helvetica'
+$postfont: 'helvetica neue'
     
 .post
-  :font-size 17px
+  :font-size 18px
   :font-family $postfont, arial
+  :font-weight 500
   :height 50px
   :border-top 1px solid black
   :border-bottom 1px solid black
   :background-color lighten(#dddddd, 10%)
-  :line-height 12px
+  :line-height 14px
+  :-webkit-margin-before 1em
+  .title small
+    :font-size 12px
+    :font-weight 200
+    :color gray
   td
     &:nth-child(1)
       :width 45px
@@ -81,6 +110,10 @@ $postfont: 'helvetica'
       :text-decoration underline
   &:hover
     :background-color rgba(100,100,100,.1)
+    
+.user, .comments
+  :font-size 13px
+  :font-weight 500
     
 .url
   :font-size 10px

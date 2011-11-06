@@ -1,0 +1,9 @@
+%table
+  - @comments.each do |c|
+    %tr.comment
+      %td
+        %span.content= c.content
+        %br
+        %span.posted= time_ago_in_words(c.created_at) + " ago"
+      -if c.user_id?
+        %td= User.find(c.user_id).username

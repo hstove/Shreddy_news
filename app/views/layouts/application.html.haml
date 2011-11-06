@@ -8,18 +8,18 @@
     %table
       %colgroup.left
       %colgroup.two
+      %colgroup.three
       %colgroup.last
       %thead
         %tr.main
           %th.h1= link_to "Shreddy News", posts_path
-          %th 
-            %a{href: "#"} About
+          %th= link_to 'about', @post
           -if user_signed_in?
-            %th= current_user.username
-            %th= link_to 'sign out', destroy_user_session_path, :method => 'delete'
-          -else
-            %th= link_to 'sign up', new_user_registration_path
-            %th= link_to 'sign in', new_user_session_path
+            %th.username= "hello #{current_user.username} |"
+            %th.sign= link_to 'sign out', destroy_user_session_path, :method => 'delete'
+          -else  
+            %th.sign= link_to 'sign in', new_user_session_path
+            %th.sign= link_to 'sign up', new_user_registration_path
     =yield
 
 

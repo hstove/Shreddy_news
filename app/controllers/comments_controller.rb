@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  respond_to :html, :js
   # GET /comments
   # GET /comments.json
   def index
@@ -25,7 +26,8 @@ class CommentsController < ApplicationController
   # GET /comments/new.json
   def new
     @post = Post.find(params[:post_id])
-    @comment = Comment.new(:post_id => @post.id)
+    @user = User.find(params[:user_id])
+    @comment = Comment.new(:post_id => @post.id, :user_id => @user.id)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,7 +44,9 @@ class CommentsController < ApplicationController
   # POST /comments.json
   def create
     @post = Post.find(params[:post_id])
+    @user = current_user
     @comment = @post.comments.new(params[:comment])
+    @comment.user_id = @user.id
 
     respond_to do |format|
       if @comment.save
@@ -74,11 +78,12 @@ class CommentsController < ApplicationController
   # DELETE /comments/1
   # DELETE /comments/1.json
   def destroy
+    @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
     @comment.destroy
 
     respond_to do |format|
-      format.html { redirect_to comments_url }
+      format.html { redirect_to @post }
       format.json { head :ok }
     end
   end

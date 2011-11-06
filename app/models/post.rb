@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   has_many :comments
+  has_many :votes
   belongs_to :user
   validates_presence_of :url, :title, :user_id
   validate :is_video?
@@ -10,8 +11,12 @@ class Post < ActiveRecord::Base
     if self.votes.nil?
       self.votes = 0
     end
-    score = (self.votes + 1) / ((((Time.now - self.created_at) / 1.hour ) + 2)**1.5)
+    score = (self.votes.count + 1) / ((((Time.now - self.created_at) / 1.hour ) + 2)**1.5)
     (score * 100).round
+  end
+  
+  def vote!(t)
+    self.votes.create(:votes => t.to_i)
   end
   
   def is_video?

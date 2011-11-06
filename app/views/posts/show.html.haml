@@ -4,15 +4,25 @@
 
 .video= content_tag(filters(@post.url))
 
-%table
-  - @post.comments.each do |c|
-    %tr.comment
-      %td
-        %span.content= c.content
-        %br
-        %span.posted= time_ago_in_words(c.created_at) + " ago"
-%br
-  
-.new_comment= link_to 'new comment', new_post_comment_path( :post_id => @post.id )
+#comments=render 'comments/comments'
 
+%br
+= form_for([@post, @comment]) do |f|
+  -if @comment.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@comment.errors.count, "error")} prohibited this comment from being saved:"
+      %ul
+        - @comment.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.text_area :content, :rows => "4"
+  .actions
+    = f.submit 'Save'
+    
+    
+-if user_signed_in?
+  =link_to 'new comment', new_post_comment_path(@post, :user_id => @user.id)
+
+  
 

@@ -26,53 +26,22 @@ module ApplicationHelper
     end
     if ns_regex.match(text)
       ns_id = $2
-      @result = %{iframe src="http://www.newschoolers.com/videoembed/#{ns_id}" class="nsVideoEmbed" width="360" height="225" frameborder="0" style="border: 0px; padding: 0xp; margin: 0px;"<\/iframe}
+      @result = %{iframe src="http://www.newschoolers.com/videoembed/#{ns_id}" width="360" height="225" frameborder="0" style="border: 0px; padding: 0xp; margin: 0px;"<\/iframe}
     end
     @result
   end
   
-  def is_video(id)
-    url = Post.find(id)
-    if url.url =~ /http:\/\/(www.)?vimeo\.com\/([A-Za-z0-9._%-]*)((\?|#)\S+)?/
-      @safe = true
-    elsif url.url =~ /http:\/\/(www.)?youtube\.com\/watch\?v=([A-Za-z0-9._%-]*)(\&\S+)?|http:\/\/(www.)?youtu\.be\/([A-Za-z0-9._%-]*)?/
-      @safe = true
-    else
-      @safe = false
+  def basic_url(text)
+    vimeo_regex = /http:\/\/(www.)?(vimeo\.com)\/([A-Za-z0-9._%-]*)((\?|#)\S+)?/
+    youtube_regex = /http:\/\/(www.)?(youtube\.com)\/watch\?v=([A-Za-z0-9._%-]*)(\&\S+)?|http:\/\/(www.)?youtu\.be\/([A-Za-z0-9._%-]*)?/
+    ns_regex = /http:\/\/(www.)?(newschoolers\.com)\/watch\/([0-9]*)/
+    regex = [vimeo_regex, youtube_regex, ns_regex]
+    regex.each do |r|
+      if r.match(text)
+        @url = $2
+      end
     end
-    if @safe == true; video = "video"
-    end
-    video
-  end
-  
-  
-  
-  
-  def vimeo(text)
-     text.gsub(/http:\/\/(www.)?vimeo\.com\/([A-Za-z0-9._%-]*)((\?|#)\S+)?/) do
-       vimeo_id = $2
-       width = '440'
-       height = '248'
-       show_title = "title=0"
-       show_byline = "byline=0" 
-       show_portrait = "portrait=0"
-       frameborder = false || 0
-       query_string_variables = [show_title, show_byline, show_portrait].compact.join("&")
-       query_string = "?" + query_string_variables unless query_string_variables.empty?
-
-       %{<iframe src="http://player.vimeo.com/video/#{vimeo_id}#{query_string}" width="#{width}" height="#{height}" frameborder="#{frameborder}"></iframe>}
-     end
-   end
-   
-   def youtube(text)
-     regex = /http:\/\/(www.)?youtube\.com\/watch\?v=([A-Za-z0-9._%-]*)(\&\S+)?|http:\/\/(www.)?youtu\.be\/([A-Za-z0-9._%-]*)?/
-       text.gsub(regex) do
-         youtube_id = $2 || $5
-         width = 390
-         height = 250
-         frameborder = 0
-         %{iframe class="youtube-player" type="text/html" width="#{width}" height="#{height}" src="http://www.youtube.com/embed/#{youtube_id}" frameborder="#{frameborder}"
-     </iframe}
-       end
-     end
+    @url
 end
+end
+        

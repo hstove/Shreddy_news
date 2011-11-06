@@ -5,15 +5,17 @@
   - @posts.each do |post|
     %tr.post
       %td
-        %span.votes= post.votes
-        = link_to '+', :controller => :posts, :action => :upvote, :id => post.id
+        %span.votes
+          = votes_for(post)
+          = link_to '+', :controller => :posts, :action => 'upvote', :post_id => post.id
       %td.title
         = link_to post.title, post
+        %small= basic_url(post.url)
         %br
         %span.url= time_ago_in_words(post.created_at) + " ago"
       - if post.user_id?
-        %td= User.find(post.user_id).username
-      %td.comments= post.comments.count 
+        %td.user= User.find(post.user_id).username
+      %td.comments= pluralize(post.comments.count, 'comment')
 
 -if user_signed_in?      
   .newpost= link_to 'New Post', new_user_post_path(:user_id => @user.id)
