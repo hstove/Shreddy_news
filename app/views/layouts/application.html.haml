@@ -1,6 +1,7 @@
 
   
 %head
+  %title= "Shreddy News - #{@title}"
   =stylesheet_link_tag "main", "application"
   =javascript_include_tag "application"
 %body.all
@@ -13,7 +14,9 @@
       %thead
         %tr.main
           %th.h1= link_to "Shreddy News", posts_path
-          %th= link_to 'about', @post
+          %th= link_to "New Posts", new_index_path
+          -unless user_signed_in?
+            %th.invite= link_to "New Here?", page_path("new")
           -if user_signed_in?
             %th.username= "hello #{current_user.username} |"
             %th.sign= link_to 'sign out', destroy_user_session_path, :method => 'delete'

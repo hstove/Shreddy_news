@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.sort { |a,b| -(a.score <=> b.score) }
     @user = current_user
+    @title = "Top New Action Sports Videos"
 
     respond_to do |format|
       format.html # index.html.erb
@@ -20,6 +21,7 @@ class PostsController < ApplicationController
     @comments = @post.comments.all
     @comment = @post.comments.new
     @user = current_user
+    @title = @post.title
 
     respond_to do |format|
       format.html # show.html.erb
@@ -31,6 +33,7 @@ class PostsController < ApplicationController
   def new
     @user = User.find(params[:user_id])
     @post = Post.new(:user_id => @user.id)
+    @title = "New Post"
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,6 +44,7 @@ class PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
+    @title = "Edit Post"
   end
 
   # POST /posts

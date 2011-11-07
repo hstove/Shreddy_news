@@ -8,6 +8,7 @@ gem 'minitest'
 gem 'thin'
 gem 'taps'
 gem 'devise'
+gem 'high_voltage'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'

@@ -1,5 +1,7 @@
 ShreddyNews::Application.routes.draw do
   
+  get "new/index"
+
   devise_for :users
 
   resources :comments
@@ -7,6 +9,8 @@ ShreddyNews::Application.routes.draw do
   get "admin/index"
   
   match "admin" => "admin#index"
+  
+  match "new" => "new#index"
   
   get "posts/upvote"
 

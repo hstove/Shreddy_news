@@ -1,0 +1,24 @@
+%h1.new_here New Here?
+
+%h3.description Welcome to Shreddy News. This is a user-sumbitted action sports video site. Here's how it works:
+
+%ol
+  %li 
+    Post a new video you like from 
+    = link_to 'newschoolers.com', 'http://newschoolers.com'
+    ,
+    =link_to 'vimeo.com', 'http://vimeo.com'
+    , or 
+    =link_to 'youtube.com', 'http://youtube.com'
+    \. Support for more sites added soon.
+  %br
+  %br
+  %li
+    Videos get upvoted by other users, and the homepage is a rolling list of the latest and greatest videos from all over action sports.
+    
+#actions
+  .sign_up
+    %a= link_to 'Sign Up', new_user_registration_path
+  .home
+    %a= link_to 'Back to Homepage', posts_path
+    
