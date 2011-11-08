@@ -9,10 +9,3 @@
 a:hover {
   background-color: white;
 }
-
-.all {
-  background-image: url('assets/bgnoise_lg.png');
-  backround-repeat: repeat;
-  background: inherit;
-}
-

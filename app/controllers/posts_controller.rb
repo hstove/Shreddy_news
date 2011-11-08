@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.sort { |a,b| -(a.score <=> b.score) }
+    @posts = Post.paginate(:page => params[:page], :per_page => 25).all.sort { |a,b| -(a.score <=> b.score) }
     @user = current_user
     @title = "Top New Action Sports Videos"
 
