@@ -11,9 +11,42 @@
   :border 1px solid black
   :padding 7px
   
-.video
-  :position relative
-  :left 30%
+#header
+  :width 100%
+  :border-bottom 3px solid rgba(100,100,100,.3)
+  :height 30px
+  div
+    :position relative
+    :bottom 0px
+    :height 100%
+  .h1 
+    :float left
+    :color black
+    :font-size 30px
+    :font-family Helvetica
+    :letter-spacing -2px
+    :word-spacing -5px
+    :font-weight 700
+  .new  
+    :margin-left 10px
+    :float left
+    a 
+      :font-size 17px
+      :position relative
+      :top 12px
+  .invite
+    :margin-left 10px
+    :float left
+    :left 0
+    :font-size 17px
+    a
+      :font-weight 700
+      :position relative
+      :top 12px
+      :color lighten(red, 10%)
+  .sign
+    :right 1px
+    :float right
 
 $textsize: 17px
 
@@ -23,52 +56,11 @@ a
   &:hover
     :color lighten(black, 20%)
     :background-color inherit
-
-table
-  :width 100%
-  :position relative
-  :top 5px
-  :border-collapse collapse
-  thead
-    .h1
-      :color black
-      :font-size 30px
-      :font-family Helvetica
-      :letter-spacing -2px
-      :word-spacing -5px
-      :font-weight 700
+    
 h1
   :text-align center
 
-th
-  :text-align left
-.main
-  :border-bottom 3px solid rgba(100,100,100,.3)
-  :vertical-align bottom
-  a
-    :text-decoration none
-    :font-family Helvetica
-    :color black
-    :background-color none
-    &:hover
-      :color black
-      :background-color none
-  th 
-    :font-weight 500
-    :position relative
-    
-colgroup
-  :position relative
 
-.left
-  :width 20%
-.two
-  :width 40%
-.three
-  :left 5%
-
-.sign
-  :width 70px
 
 .sign a
   :color darken(blue, 30%)
@@ -137,9 +129,3 @@ $postfont: 'helvetica neue'
 .newpost
   :margin-top 10px
   
-.invite
-  :position absolute
-  :left -300px
-  :width 20%
-.invite a
-  :color lighten(red, 30%)

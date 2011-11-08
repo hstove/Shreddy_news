@@ -19,14 +19,14 @@ module ApplicationHelper
     end
     if youtube_regex.match(text)
       youtube_id = $2 || $5
-      width = 390
-      height = 250
+      width = 440
+      height = 282
       frameborder = 0
       @result = %{iframe class="youtube-player" type="text/html" width="#{width}" height="#{height}" src="http://www.youtube.com/embed/#{youtube_id}" frameborder="#{frameborder}"</iframe}
     end
     if ns_regex.match(text)
       ns_id = $2
-      @result = %{iframe src="http://www.newschoolers.com/videoembed/#{ns_id}" width="360" height="225" frameborder="0" style="border: 0px; padding: 0xp; margin: 0px;"<\/iframe}
+      @result = %{iframe src="http://www.newschoolers.com/videoembed/#{ns_id}" width="440" height="275" frameborder="0" style="border: 0px; padding: 0xp; margin: 0px;"<\/iframe}
     end
     @result
   end

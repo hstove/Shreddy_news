@@ -2,7 +2,8 @@
 
 .comment_link= link_to @post.title, @post.url
 
-.video= content_tag(filters(@post.url))
+.video
+  .iframe= content_tag(filters(@post.url))
 
 #comments=render 'comments/comments'
 

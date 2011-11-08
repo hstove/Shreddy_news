@@ -16,23 +16,19 @@
     })();
 %body.all
   #inner
-    %table
-      %colgroup.left
-      %colgroup.two
-      %colgroup.three
-      %colgroup.last
-      %thead
-        %tr.main
-          %th.h1= link_to "Shreddy News", posts_path
-          %th= link_to "New Posts", new_index_path
-          -unless user_signed_in?
-            %th.invite= link_to "New Here?", page_path("new")
-          -if user_signed_in?
-            %th.username= "hello #{current_user.username} |"
-            %th.sign= link_to 'sign out', destroy_user_session_path, :method => 'delete'
-          -else  
-            %th.sign= link_to 'sign in', new_user_session_path
-            %th.sign= link_to 'sign up', new_user_registration_path
+    #header
+      .h1= link_to "Shreddy News", posts_path
+      .new= link_to "New Posts", new_index_path
+      .invite= link_to "new here?", page_path("new") unless user_signed_in?
+      .sign
+        -if user_signed_in?
+          ="hello #{current_user.username}"
+          %br
+          =link_to 'sign_out', destroy_user_session_path, :method => 'delete'
+        -else  
+          = link_to 'sign in', new_user_session_path
+          %br
+          = link_to 'sign up', new_user_registration_path
     =yield
 
 

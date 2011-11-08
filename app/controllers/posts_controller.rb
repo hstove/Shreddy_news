@@ -115,6 +115,12 @@ class PostsController < ApplicationController
     @post = Post.find(params[:post_id])
     @user = current_user
     @votes = Vote.find_or_create_by_post_id_and_user_id(@post.id, @user.id)
+    @post_creator = User.find(@post.user_id)
+    if @post_creator.karma?
+      @post_creator.karma +=1
+    else
+      @post_creator.karma = 1
+    end
     redirect_to :action => 'index'
   end
     
