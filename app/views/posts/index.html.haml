@@ -1,3 +1,4 @@
+#box= render @post
 %table#posts
   -if @posts.empty?
     %tr.post
@@ -7,9 +8,9 @@
       %td
         %span.votes
           = votes_for(post)
-          = link_to '+', :controller => :posts, :action => 'upvote', :post_id => post.id
+          = link_to '+',{ :controller => :posts, :action => 'upvote' , :post_id => post.id}, :remote => true
       %td.title
-        = link_to post.title, post
+        = link_to post.title,{ :controller => :posts, :action => 'switch_vid', :post => post }, :remote => true
         %small= basic_url(post.url)
         %br
         %span.url= time_ago_in_words(post.created_at) + " ago"

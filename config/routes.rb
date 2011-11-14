@@ -13,6 +13,8 @@ ShreddyNews::Application.routes.draw do
   match "new" => "new#index"
   
   get "posts/upvote"
+  
+  get "posts/switch_vid"
 
   resources :posts do
     resources :comments

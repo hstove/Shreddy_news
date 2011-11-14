@@ -7,10 +7,16 @@ class PostsController < ApplicationController
     @posts = Post.paginate(:page => params[:page], :per_page => 25).all.sort { |a,b| -(a.score <=> b.score) }
     @user = current_user
     @title = "Top New Action Sports Videos"
-
+    if params[:post]
+      @post = Post.find(params[:post])
+    else
+      @post = @posts.first
+    end
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
+      format.js
     end
   end
 
@@ -121,7 +127,17 @@ class PostsController < ApplicationController
     else
       @post_creator.karma = 1
     end
-    redirect_to :action => 'index'
+    respond_to do |format|
+    #  format.html { redirect_to posts_path }
+      format.js
+    end
+  end
+  
+  def switch_vid
+    @post = Post.find(params[:post])
+    respond_to do |format|
+      format.js
+    end
   end
     
   

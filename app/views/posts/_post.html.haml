@@ -1,0 +1,7 @@
+.video
+  .iframe= content_tag(filters(@post.url))
+  .info
+    .up
+      = link_to '+', :controller => :posts, :action => 'upvote', :post_id => @post.id
+      = votes_for(@post)
+    .title= link_to @post.title, @post

@@ -2,8 +2,7 @@
 
 .comment_link= link_to @post.title, @post.url
 
-.video
-  .iframe= content_tag(filters(@post.url))
+= render 'video', :locals => { :post => @post}
 
 #comments=render 'comments/comments'
 

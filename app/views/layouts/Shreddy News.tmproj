@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>application.html.haml</string>
+	<string>../posts/index.html.haml</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -26,9 +26,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>12</integer>
+				<integer>18</integer>
 				<key>line</key>
-				<integer>9</integer>
+				<integer>10</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -194,9 +194,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>5</integer>
+				<integer>23</integer>
 				<key>line</key>
-				<integer>18</integer>
+				<integer>16</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -385,6 +385,34 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>../../../db/migrate/20111107184513_addcolumntousers.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../../../db/migrate/20111108033333_add_karma_to_users.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>../../../db/schema.rb</key>
 		<dict>
 			<key>caret</key>
@@ -483,6 +511,34 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>../../assets/javascripts/application.js</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>22</integer>
+				<key>line</key>
+				<integer>7</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../../assets/javascripts/new.js.coffee</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>../../assets/stylesheets/admin.css.sass</key>
 		<dict>
 			<key>caret</key>
@@ -502,9 +558,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>11</integer>
+				<integer>10</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -544,23 +600,51 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>16</integer>
+				<integer>15</integer>
 				<key>line</key>
-				<integer>74</integer>
+				<integer>112</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>45</integer>
+			<integer>0</integer>
+		</dict>
+		<key>../../assets/stylesheets/new.css.scss</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../../assets/stylesheets/new_here.css.sass</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>19</integer>
+				<key>line</key>
+				<integer>9</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 		<key>../../assets/stylesheets/posts.css.scss</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>21</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>5</integer>
+				<integer>13</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -572,9 +656,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>11</integer>
+				<integer>6</integer>
 				<key>line</key>
-				<integer>27</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -595,14 +679,28 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>../../assets/stylesheets/video.css.sass</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>21</integer>
+				<key>line</key>
+				<integer>26</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>../../controllers/admin_controller.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>2</integer>
+				<integer>63</integer>
 				<key>line</key>
-				<integer>6</integer>
+				<integer>11</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -637,19 +735,33 @@
 			<key>firstVisibleLine</key>
 			<integer>24</integer>
 		</dict>
+		<key>../../controllers/new_controller.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>23</integer>
+				<key>line</key>
+				<integer>3</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>../../controllers/posts_controller.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>34</integer>
+				<integer>15</integer>
 				<key>line</key>
-				<integer>19</integer>
+				<integer>18</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>81</integer>
+			<integer>0</integer>
 		</dict>
 		<key>../../controllers/users_controller.rb</key>
 		<dict>
@@ -684,14 +796,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>7</integer>
+				<integer>102</integer>
 				<key>line</key>
-				<integer>42</integer>
+				<integer>28</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>9</integer>
+			<integer>0</integer>
 		</dict>
 		<key>../../helpers/comments_helper.rb</key>
 		<dict>
@@ -768,9 +880,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>20</integer>
+				<integer>33</integer>
 				<key>line</key>
-				<integer>3</integer>
+				<integer>4</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -992,21 +1104,7 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>18</integer>
-				<key>line</key>
-				<integer>6</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>../devise/sessions/new.html.erb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>88</integer>
+				<integer>93</integer>
 				<key>line</key>
 				<integer>2</integer>
 			</dict>
@@ -1019,24 +1117,24 @@
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>2</integer>
+				<integer>4</integer>
 				<key>line</key>
 				<integer>2</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>88</integer>
+				<integer>93</integer>
 				<key>line</key>
 				<integer>2</integer>
 			</dict>
 		</dict>
-		<key>../posts/_form.html.haml</key>
+		<key>../devise/sessions/new.html.erb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>25</integer>
+				<integer>15</integer>
 				<key>line</key>
 				<integer>0</integer>
 			</dict>
@@ -1045,14 +1143,72 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>../posts/_vimeo.html.haml</key>
+		<key>../new/index.html.haml</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>12</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>1</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../pages/new.html.haml</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>8</integer>
+				<key>line</key>
+				<integer>9</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../posts/_form.html.haml</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>2</integer>
+				<key>line</key>
+				<integer>8</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>21</integer>
+				<key>line</key>
+				<integer>15</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>2</integer>
+				<key>line</key>
+				<integer>8</integer>
+			</dict>
+		</dict>
+		<key>../posts/_post.html.haml</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>38</integer>
+				<key>line</key>
+				<integer>6</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -1078,9 +1234,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>88</integer>
+				<integer>76</integer>
 				<key>line</key>
-				<integer>9</integer>
+				<integer>12</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -1106,9 +1262,37 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>17</integer>
+				<integer>45</integer>
 				<key>line</key>
-				<integer>18</integer>
+				<integer>4</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../posts/switch_vid.js.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>51</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../posts/upvote.js.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>83</integer>
+				<key>line</key>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -1148,9 +1332,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>59</integer>
+				<integer>92</integer>
 				<key>line</key>
-				<integer>17</integer>
+				<integer>6</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -1163,9 +1347,14 @@
 		<string>../posts/edit.html.haml</string>
 		<string>../posts/new.html.haml</string>
 		<string>../posts/show.html.haml</string>
+		<string>../posts/upvote.js.erb</string>
+		<string>../posts/_post.html.haml</string>
+		<string>../../assets/stylesheets/video.css.sass</string>
 		<string>../comments/create.js.rjs</string>
+		<string>../posts/switch_vid.js.erb</string>
 		<string>../comments/_comments.html.haml</string>
 		<string>../posts/index.html.haml</string>
+		<string>../new/index.html.haml</string>
 		<string>../../../db/migrate/20111105204720_remove_column_from_post.rb</string>
 		<string>../comments/edit.html.haml</string>
 		<string>../../controllers/application_controller.rb</string>
@@ -1173,19 +1362,21 @@
 		<string>../../assets/stylesheets/users.css.scss</string>
 		<string>../../assets/stylesheets/scaffolds.css.scss</string>
 		<string>../../assets/stylesheets/main.css.sass</string>
+		<string>../../assets/stylesheets/new.css.scss</string>
 		<string>../../../db/migrate/20111105000818_create_votes.rb</string>
 		<string>../../assets/stylesheets/comments.css.scss</string>
 		<string>../../../config/environment.rb</string>
 		<string>../../../config/application.rb</string>
 		<string>../../../db/migrate/20111103005738_devise_create_users.rb</string>
 		<string>../../assets/stylesheets/posts.css.scss</string>
+		<string>../../../db/migrate/20111107184513_addcolumntousers.rb</string>
+		<string>../../../db/migrate/20111108033333_add_karma_to_users.rb</string>
 		<string>../../assets/stylesheets/comments.css.sass</string>
 		<string>../comments/new.html.haml</string>
 		<string>../../controllers/comments_controller.rb</string>
 		<string>../comments/_form.html.haml</string>
 		<string>../comments/show.html.haml</string>
 		<string>../posts/_form.html.haml</string>
-		<string>../posts/_vimeo.html.haml</string>
 		<string>../../models/post.rb</string>
 		<string>../../models/user.rb</string>
 		<string>../../../db/migrate/20111103024623_add_column_to_posts.rb</string>
@@ -1203,6 +1394,7 @@
 		<string>../../controllers/users_controller.rb</string>
 		<string>../admin/index.html.haml</string>
 		<string>../../controllers/admin_controller.rb</string>
+		<string>../../controllers/new_controller.rb</string>
 		<string>../../assets/stylesheets/admin.css.sass</string>
 		<string>../../../db/schema.rb</string>
 		<string>../../../db/migrate/20111104230058_addcolumntocomments.rb</string>
@@ -1212,6 +1404,10 @@
 		<string>../../helpers/application_helper.rb</string>
 		<string>../../helpers/users_helper.rb</string>
 		<string>../../../Gemfile</string>
+		<string>../pages/new.html.haml</string>
+		<string>../../assets/javascripts/application.js</string>
+		<string>../../assets/javascripts/new.js.coffee</string>
+		<string>../../assets/stylesheets/new_here.css.sass</string>
 		<string>../../../test/unit/post_test.rb</string>
 		<string>../../../Gemfile.lock</string>
 		<string>../../../config/environments/development.rb</string>
