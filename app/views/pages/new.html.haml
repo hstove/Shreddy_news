@@ -17,9 +17,7 @@
   %li
     Videos get upvoted by other users, and the homepage is a rolling list of the latest and greatest videos from all over action sports.
     
-#actions
-  .sign_up
-    %a= link_to 'Sign Up', new_user_registration_path
-  .home
-    %a= link_to 'Back to Homepage', posts_path
+.actions
+  %a= link_to 'Sign Up', new_user_registration_path, :class => 'btn success large'
+  %a= link_to 'Back to Homepage', posts_path, :class => 'btn primary large'
     

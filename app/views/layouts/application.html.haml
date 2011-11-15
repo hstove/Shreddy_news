@@ -8,9 +8,9 @@
   = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"
   = csrf_meta_tag
 %body.all
-  #header
-    .h1= link_to "Shreddy News", posts_path
-    .new= link_to "New Posts", new_index_path
+  #header.topbar
+    .company= link_to "Shreddy News", posts_path
+    .new= link_to "| New Posts", new_index_path
     .invite= link_to "new here?", page_path("new") unless user_signed_in?
     .sign
       -if user_signed_in?

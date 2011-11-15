@@ -1,3 +1,4 @@
+
 .all
   //:background-image image-url("tactile_noise.png")
   :background none
@@ -27,17 +28,18 @@ table
   :top 0
   :left 0
   :right 0
-  :border-bottom 3px solid rgba(100,100,100,.3)
-  :background-color black
-  :color white
+  :border none
+  :color #ddd
   :height 30px
+  a
+    &:hover
+      :color white
   div
     :position relative
     :bottom 0px
     :height 100%
-  .h1 
+  .company
     :float left
-    :color #ddd
     :font-size 30px
     :font-family Helvetica
     :letter-spacing -2px
@@ -56,13 +58,13 @@ table
     :left 0
     :font-size 17px
     a
-      :font-weight 300
-      :position relative
-      :top 12px
-      :color lighten(red, 10%)
   .sign
     :right 1px
     :float right
+    :margin-right 10px
+    a
+      :color white
+      :font-weight 600
 
 $textsize: 17px
 
@@ -75,13 +77,6 @@ a
     
 h1
   :text-align center
-
-.sign
-  :margin-right 10px
-
-.sign a
-  :color white
-  :font-weight 600
   
   
 .username
