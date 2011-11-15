@@ -2,6 +2,11 @@
   .iframe= content_tag(filters(@post.url))
   .info
     .up
-      = link_to '+', :controller => :posts, :action => 'upvote', :post_id => @post.id
+      = link_to '+',{ :controller => :posts, :action => 'upvote' , :post_id => @post.id}, :remote => true
       = votes_for(@post)
-    .title= link_to @post.title, @post
+      %br
+      %small= link_to "View at #{basic_url(@post.url)}", @post.url
+    .title
+      = link_to @post.title, @post
+      %br
+      %small= time_ago_in_words(post.created_at) + " ago"

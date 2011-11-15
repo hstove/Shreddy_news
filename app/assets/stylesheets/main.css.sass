@@ -1,25 +1,35 @@
 .all
-  :background-image image-url("tactile_noise.png")
+  //:background-image image-url("tactile_noise.png")
+  :background none
   :backround-repeat repeat
+  :font-family 'helvetica neue'
   
 table
   :border-collapse collapse
   :width 100%
   
 #inner
-  :background-image image-url("bgnoise_lg.png")
+  //:background-image image-url("bgnoise_lg.png")
+  :background none
   :backround-repeat repeat
   :position relative
-  :left 5%
+  :top 30px
   :width 90%
+  :left 5%
   :min-height 99%
-  :border 7px solid #ccc
+  :border none
   :border-radius 8px
   :padding 12px
   
 #header
-  :width 100%
+  :padding 5px
+  :position absolute
+  :top 0
+  :left 0
+  :right 0
   :border-bottom 3px solid rgba(100,100,100,.3)
+  :background-color black
+  :color white
   :height 30px
   div
     :position relative
@@ -27,7 +37,7 @@ table
     :height 100%
   .h1 
     :float left
-    :color black
+    :color #ddd
     :font-size 30px
     :font-family Helvetica
     :letter-spacing -2px
@@ -46,7 +56,7 @@ table
     :left 0
     :font-size 17px
     a
-      :font-weight 700
+      :font-weight 300
       :position relative
       :top 12px
       :color lighten(red, 10%)
@@ -57,7 +67,7 @@ table
 $textsize: 17px
 
 a
-  :color black
+  :color inherit
   :text-decoration none
   &:hover
     :color lighten(black, 20%)
@@ -66,10 +76,11 @@ a
 h1
   :text-align center
 
-
+.sign
+  :margin-right 10px
 
 .sign a
-  :color darken(blue, 30%)
+  :color white
   :font-weight 600
   
   
@@ -141,3 +152,8 @@ $postfont: 'helvetica neue'
 .newpost
   :margin-top 10px
   
+#bottom
+  :position relative
+  :left 0
+  :right 0
+  :text-align center

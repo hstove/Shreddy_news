@@ -2,7 +2,7 @@
 
 .comment_link= link_to @post.title, @post.url
 
-= render 'video', :locals => { :post => @post}
+= render @post
 
 #comments=render 'comments/comments'
 

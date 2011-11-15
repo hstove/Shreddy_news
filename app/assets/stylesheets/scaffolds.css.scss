@@ -13,6 +13,10 @@ pre {
 div {
   &.field, &.actions {
     margin-bottom: 10px; } }
+    
+.actions {
+  height: 15px;
+}
 
 #notice {
   color: green; }

@@ -1,5 +1,5 @@
 .video 
-  :background-color rgba(100,100,100,.3)
+  :background-color rgba(100,100,100,.2)
   :border none
   :border-radius 3px
   :width 50%
@@ -14,24 +14,33 @@
   :width 440px
   
 .info
+  :position relative
+  :top -8px
   :width 100%
-  :height 29px
+  :height 42px
   :font-family 'helvetica neue', arial, serif
   :font-size 25px
   .title
     :font-size 25px
     :font-weight 400
     :width 100%
-    :text-align center
-    a
-      :margin-left -10%
+    :text-align right
+    a, small
+      :margin-right 10px
+    small
+      :font-size 12px
+      :color #aaa
+
 
 .up
+  :width 200px
   :font-size 25px
   :position relative
-  :width 10%
   :font-weight 800
+  :text-align left
   :float left
-  :text-align center
   a
-    :text-align center
+    :margin-left 10px
+  small
+    :font-size 12px
+    :color #aaa
